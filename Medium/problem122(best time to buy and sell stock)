@@ -1,0 +1,16 @@
+class Solution {
+    public int maxProfit(int[] prices) {
+        int maxprofit = 0 ; //first create a maxprofit variable and initiate with 0 as we will add on it. 
+      
+        for(int i = 0 ; i<prices.length -1 ; i++) //loop over the array length -1 , because we compare each element with the next, 
+                                                  //if we do that for the last element we will go out of bounds
+        {
+            if(prices[i]< prices[i+1]) // if todays price is less than tomorrow's then assume we immediatly buy.
+            {
+                maxprofit = maxprofit+ prices[i+1]- prices[i]; // calculate the profite made by subtracting tommorow's price from today. example [1,3] will return 2.
+            }
+        }
+
+        return maxprofit; //return the maximum profit  
+    }
+}
