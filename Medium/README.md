@@ -1,2 +1,2 @@
-Check in code comments for explanation. 
+Check the code comments for explanation. 
 
